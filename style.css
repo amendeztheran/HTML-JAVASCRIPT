@@ -1,0 +1,76 @@
+#contenedorPadre{
+    background-color: rgb(255, 182, 249);
+    border: 2px solid #4e57d3;/*Para establecer el color se pone seis F y luego cambiar*/
+}
+
+#cabecera{
+    background-color: #e49cde;
+    height: 20%; /*Altura, se pone en porcentaje*/
+}
+
+#menu{
+    background-color: #f8ffb5;
+    height: 20px;
+}
+
+#izquierda{
+    background-color: aqua;
+    height: 50%; /*Altura, se pone en porcentaje*/
+    width: 50%; /*Anchura, se pone en porcentaje*/
+    float: left;/*Posicionar en izquierda*/
+
+}
+
+#derecha{
+    background-color:  rgb(214, 184, 241);
+    height: 50%;
+    width: 50%;
+    float: right; /*Posicionar en derecha*/
+    
+}
+
+#pie{
+    height: 10%;
+    background-color: rgb(235, 193, 164);
+    clear: both;/*Posicionar debajo de los contenedores "div" flotantes que están en height y width*/
+
+}
+
+table{
+    border-collapse: collapse;/*Se aplica a los bordes de la celda para que se combinen y no existan espacios entre ellos*/
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;/*Espacio de salto de linea de cada celda*/
+}
+.boton {
+    padding: 10px 20px;/*Espacio alrededor del texto del botón */
+    font-size: 16px;/*Tamaño de la letra*/
+    background-color: rgb(26, 190, 26);
+    color: rgb(255, 255, 255);/*Color de la letra*/
+    border: none;/*No tiene borde*/
+    cursor: pointer;/*Cambia el cursor al estar encima del botón. Cambia de flecha a mano.*//**/
+    border-radius: 4px;/*Borde en las esquinas*/
+}
+.tablero1{
+    margin-top: 0px;/*Espacio del margen superior*/
+    font-size: 20px;/*Tamaño de la letra*/
+    border: crimson solid 1px;
+    height: 50px;
+    margin-bottom: 2px; /*Espacio del margen de la caja de texto al campo o inferior.*/
+}
+.tablero2{
+    margin-top: 0px;/*Espacio del margen superior*/
+    font-size: 20px;/*Tamaño de la letra*/
+    border: rgb(103, 27, 173) solid 1px;
+    height: 50px;
+    margin-bottom: 2px; /*Espacio del margen de la caja de texto al campo o inferior.*/
+}
+.tablero3{
+    margin-top: 0px;/*Espacio del margen superior*/
+    font-size: 20px;/*Tamaño de la letra*/
+    border: rgb(255, 161, 184) solid 1px;
+    height: 50px;
+    margin-bottom: 2px; /*Espacio del margen de la caja de texto al campo o inferior.*/
+}

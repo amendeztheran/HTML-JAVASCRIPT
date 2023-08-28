@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!--Primera etiqueta, para usar html 5-->
+<html lang="es"><!--lang es para determinar el lenguaje de la página "español"--> <!---->
+    <head>
+        <meta charset="UTF-8"/> <!--UTF-8: Permite simbolos, tildes y emoticones-->
+        <meta name="descripcion" content="Está página es de prueba"/> <!--Todas las etiquetas llamadas "meta" es para darle información al explorador de lo que contiene la página-->
+        <meta name="robots" content="index,unfollow"><!--Validad la información de tú pagina por medio de algoritmo de busquedas con datos relacionados igual, ejemplo navegador "hola", busca todas las páginas que tengan hola-->
+        <meta name="viewreport" content="width=device-width,initial,scale=1.0" /> <!--Responsive: es como se adapta la página a los tipos de pantalla: celular, tablet, computador-->
+        <title>Está es mi página</title>
+        <!--<link rel="stylesheet" href="style.css"/>--> <!--Css es la página que le da color y estilo a la página web, esta linea cirve para enlazar está pagina main con la css style.css-->
+        <style>/*para hacer CSS, aqui se hace en h1 que está en el header*/
+        h1{
+            font-size: 45px;
+            color: blueviolet;
+            margin-top: 10px;/*Margén arriba del titulo, es el espacio.*/
+        }
+        .contenedor{/*Punto . contenedor se aplica a un div class, la clase es un elemento único*/
+            border: 5px solid;/*Ancho del borde, hay que poner el tipo "solido" para que sea vea*/
+            border-color: blue;/*Color del borde*/
+        }
+        #div1{/*Númeral # div1 se aplica en div id*/
+            margin-top: 10px;
+            border: 10px solid;
+            border-color: salmon;
+        }
+        span{/*Es para aplicar al primer span texto1*/
+            color: rgb(212, 76, 76);
+            font-size: 25px;/*Tamaño de la fuente*/
+            font-family: cursive;/*Tipo de letra o fuente*/
+        }
+        
+        p>span{/*Es para aplicar al segundo span texto2*/
+            color: aqua;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+       /* p>p>span{ /*Resolver*
+            color: rgb(196, 40, 118);
+            border-color: blue;
+            border: solid 10px;
+
+        }*/
+
+        </style>
+    </head>
+    <header> <!--Es una etiqueta contenedora porque tiene contiene otras etiquetas.-->
+        <h1>Titulo principal</h1><!--Etiquetas de contenido: titulo-->
+        <h2>Esta es la tienda los seis elementos</h2><!--Titulo-->
+        <h3>Subtitulo</h3>
+    </header><!--Encabezado-->
+    <body>
+        <div></div><!---->
+        <ul></ul><!--Lista desordenada-->
+        <ol></ol><!--Lista ordenada-->
+
+        <ul> <!--Se puede anidar las dos listas-->
+            <ol></ol>
+        </ul>
+        <br><!--Salto de linea-->
+
+        <div class="contenedor">
+            <h1>Titulo 1 de la página</h1>
+            <h1>Titulo 2 de la página</h1>
+            <p>Este es un parráfo del div..</p>
+        </div>
+
+        <div id="div1">
+            <h1>Titulo 3 de la página</h1>
+            <h1>Titulo 4 de la página</h1>
+            <p>Este es un parráfo del div..</p>
+            <span>texto1</span>
+                <p>
+                    <p>
+                        <span>
+                            texto3
+                        </span>
+                    </p>
+                </p>
+            <p>Este es un parráfo para el span<!---->
+                <span>texto2</span></p>
+         
+        </div>
+        
+
+
+    </body><!--Información de la página web, es el cuerpo.-->
+    <footer></footer><!--Parte final de la página: información de la compañia, derechos reservados, copyright-->
+
+
+
+</html> <!--Siempre debe tener apertura de abrir y cierre <html> </html>-->

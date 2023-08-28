@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Maquetación con CSS y Divs</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script>/* Esté es javascript, se encuentra dentro de un documento HTML, aquí hacemos operaciones*/
+
+            for (let i=0; i<=20; i++ ){
+                console.log("Este número es: "+i); //Console.log es para mostrar el resultado en la consola de inspeccionar del navegador.
+            }
+
+            let numero=1;/*Let: Declara una variable, en java es int, en javascript es se declara en tipo de numéro
+        , javascript es dinámico porque permite hacer reasignaciones de cualquier tipo, en esté caso de entero a string. El let es como el var (variable).*/
+            numero="uno"/**/
+
+            /* <!--1 ejercicio "sumar"*/
+            function sumar (){/*Se define la función sumar*/
+                let campo1=document.getElementById("campo1").value;/*Selecciona los elementos con el id que se le asignó a las etiquetas.*/
+                let campo2=document.getElementById("campo2").value;/*Value: obtiene el valor del campo de texto.*/
+                let resultado= parseInt (campo1) + parseInt (campo2);/*ParseInt: convierte la cadena de texto "campo1" en número entero.*/
+                console.log(resultado); 
+                let cajatexto = document.getElementById("mostrarTablero1");
+                console.log(cajatexto.innerHTML);
+                cajatexto.innerHTML=resultado;/*Para que muestre el resultado en la interfaz de html, asignar resultado.*/
+                /*innerHtml: */
+
+            // function sumar (numero1, numero2) /*Se define la función sumar*/
+                // let resultado = numero1 + numero2;
+                // console.log(resultado);
+            }
+            // sumar(2, 3); /*Ya al tener definida la función sumar arriba, entonces se reutiliza y se llama para hacer los procesos mas cortos.*/
+            // sumar(8, 8);
+
+            // function unirNombres (nombres, apellidos){
+            //     let unir= nombres + " " + apellidos;
+            //     console.log(unir);
+            // }
+            // unirNombres("cristina","yang");
+            // unirNombres("Meredith", "grey")
+
+/* El operador "%" (módulo) en programación nos ayuda a obtener el sobrante cuando 
+dividimos un número por otro. Al usar "%2", estamos obteniendo el sobrante cuando dividimos 
+un número entre 2. Si el sobrante es 0, eso significa que el número es divisible por 2 y, 
+por lo tanto, es par. Si el sobrante es 1, eso significa que el número no es divisible por 2 y es impar.*/      
+            /* <!--2 ejercicio "Número par o impar, se hace con una condición if"*/
+            function numeroParoImpar (){
+                let num2 = document.getElementById("num2").value;
+                let tablero2 = document.getElementById("mostrarTablero2");//Para no volverlo a escribir repetidamente dentro del if.
+                
+                if (parseInt(num2)%2==0 && num2>0){
+                    console.log("El número "+ num2+ " es par")//Console.log es para mostrar el resultado en la consola de inspeccionar del navegador.
+                    tablero2.innerHTML=("El número "+ num2 +" es par");
+                } else {
+                    console.log("El número "+ num2+ " es impar")
+                    tablero2.textContent=("El número "+ num2+ " es impar");
+                    
+                }   
+            }
+            function notaFinal (){
+                let nota = document.getElementById("nota").value;
+                let tablero3=document.getElementById("mostrarTablero3");
+
+                if (parseFloat(nota)>=5){
+                    console.log("Aprobado, su nota es de: "+ nota);
+                    tablero3.innerHTML=("Aprobado, su nota es de: "+ nota);
+                } else {
+                    if (parseFloat(nota)<5){
+                        console.log("Reprobado, su nota es de: "+ nota);
+                        tablero3.innerHTML=("Reprobado, su nota es de: "+ nota);
+                    }
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="contenedorPadre">
+        <div id="cabecera">
+            <p style="margin-top: 0; color: rgb(187, 30, 135); font-size: 50px; font-weight: 700;">Cabecera </p>
+        </div>
+        <div id="menu">Menú</div>
+        <div id="izquierda">Izquierda
+            <p><img src="charmander.jpg" height="220px"> <!--Source: origen--></p>
+        </div>
+        
+        <div id="derecha">Derecha
+            <p><table>
+                <thead><!--Cabecera de la tabla-->
+                    <th>Cedula</th><!--Titulos de la tabla del encabezado o cabecera-->
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                </thead>
+                <tbody><!--Decir que empezamos las filas, ya que terminamos las columnas-->
+                    <tr><!--Fila-->
+                        <td>1068943677</td><!--columna-->
+                        <td>Cristina</td>
+                        <td>Yang</td>
+                        <td>cristinayang@gmail.com</td>
+                    </tr>
+                    <tr><!--Fila-->
+                        <td>1068769000</td><!--columna-->
+                        <td>Meredith</td>
+                        <td>Gray</td>
+                        <td>meredithgray@gmail.com</td>
+                    </tr>
+                </tbody><!---->
+            </table></p>
+            <p>Haz <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">clic aqui</a></a></p><!--Tagert es abrir página en blanco y dar clic a la url de href-->
+            <!--1 ejercicio "sumar"--> 
+            <div class="tablero1">
+                <span id="mostrarTablero1">Mostrar resultado de sumar</span>
+            </div> <!--Mostrar resultado de la suma.-->
+            <input type="text" id="campo1" name="campo1"/>
+            <input type="text" id="campo2" name="campo2"/>
+            <!-- <input type="number" id="num" name="num" placeholder="número"/> --> <!--Number: Campo para ingresar solo número.-->
+            <!-- <input type="password" id="contrasena" name="contrasena" placeholder="contraseña"> --> <!--Password: Oculta los caracteres.-->
+            <button class="boton" onclick="sumar()">Click sumar</button><!---->
+
+            <!--2 ejercicio "Número par o impar"--> 
+            <br>
+            <br>
+            <div class="tablero2">
+                <span id="mostrarTablero2"></span>
+            </div> <!--Mostrar resultado número par o impar.-->
+            <input type="text" id="num2" name="num2">
+            <button class="boton" onclick="numeroParoImpar()">Calcular número par o impar</button>
+
+            <!--3 ejercicio "Notal final"--> 
+            <br>
+            <br>
+            <div class="tablero3">
+                <span id="mostrarTablero3"></span>
+            </div>
+            <input type="text" id="nota" name="nota">
+            <button class="boton" onclick="notaFinal()">Nota final</button>
+           
+
+            <!--onclick: es para definir la función a ejecutar al hacer click.-->
+            <!--Etiqueta <a> es para insertar enlaces y permite redireccionar, es el click aquí-->
+            <!--<iframe width="560" height="315" src="" ></iframe>--> <!--Insertar videos, insertar páginas dentro de nuestras páginas--><!---->
+            <!--<iframe width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/qcCH6JpcK5w?start=6" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>--> <!--Enlace video de youtube-->
+            <!--  <video src="http://v2v.cc/~j/theora_testsuite/320x240.ogg"></video> -->
+        </div>
+        <div id="pie">Pie</div>
+    </div>
+    </body>
+</html>
